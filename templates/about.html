@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Conheça a CondomTech</h1>
+    <p class="text-center lead mb-5">Sua parceira em inovação, segurança e eficiência tecnológica.</p>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="{{ url_for('static', filename='img/logo3.png') }}" class="img-fluid rounded shadow-sm" alt="Sobre a CondoTech">
+        </div>
+        <div class="col-md-6">
+            <h2 class="display-6 fw-bold mb-3">Nossa Missão</h2>
+            <p>A CondomTech nasceu com a missão de simplificar a tecnologia para empresas e condomínios. Acreditamos que a inovação deve ser acessível e confiável, e é por isso que nos dedicamos a entregar soluções personalizadas que realmente fazem a diferença no dia a dia dos nossos clientes.</p>
+            <p>Com uma equipe técnica altamente qualificada e anos de experiência no mercado, estamos prontos para enfrentar qualquer desafio e garantir a excelência em cada projeto.</p>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <p class="fs-5">Pronto para modernizar seu ambiente com tecnologia de ponta?</p>
+        <a href="/contact" class="btn btn-primary btn-lg">Fale Conosco Agora</a>
+    </div>
+{% endblock %}

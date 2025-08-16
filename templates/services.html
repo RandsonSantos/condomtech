@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Nossos Serviços Detalhados</h1>
+    <p class="text-center lead mb-5">Nossa expertise para atender às suas necessidades com excelência.</p>
+
+    <div class="row">
+        {% for service in services %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi {{ service.icon }} display-6 text-success me-3"></i>
+                        <h5 class="card-title mb-0">{{ service.title }}</h5>
+                    </div>
+                    <p class="card-text">{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
