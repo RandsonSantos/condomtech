@@ -4,19 +4,43 @@
     <h1 class="text-center mb-4">Conheça a CondomTech</h1>
     <p class="text-center lead mb-5">Sua parceira em inovação, segurança e eficiência tecnológica.</p>
 
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6 mb-4 mb-md-0">
-            <img src="{{ url_for('static', filename='img/logo3.png') }}" class="img-fluid rounded shadow-sm" alt="Sobre a CondoTech">
-        </div>
-        <div class="col-md-6">
+    <div class="row align-items-center mb-1">
+        <div class="col-md-6 mb-4 mb-md-4">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="img-fluid rounded shadow-sm" style="max-width: 50%; height: auto;" alt="Sobre a CondoTech">
+        </div>    
+        <div class="col-md-5">
             <h2 class="display-6 fw-bold mb-3">Nossa Missão</h2>
             <p>A CondomTech nasceu com a missão de simplificar a tecnologia para empresas e condomínios. Acreditamos que a inovação deve ser acessível e confiável, e é por isso que nos dedicamos a entregar soluções personalizadas que realmente fazem a diferença no dia a dia dos nossos clientes.</p>
             <p>Com uma equipe técnica altamente qualificada e anos de experiência no mercado, estamos prontos para enfrentar qualquer desafio e garantir a excelência em cada projeto.</p>
         </div>
     </div>
-    
-    <div class="text-center mt-5">
-        <p class="fs-5">Pronto para modernizar seu ambiente com tecnologia de ponta?</p>
-        <a href="/contact" class="btn btn-primary btn-lg">Fale Conosco Agora</a>
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="display-6 fw-bold mb-3">Sua Parceira Estratégica em Tecnologia</h2>
+                <p class="lead">Na CondoTech, nosso compromisso é mais do que apenas instalar equipamentos. É construir parcerias duradouras, oferecendo soluções personalizadas que garantem segurança, eficiência e inovação.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="d-flex align-items-center mb-3"><i class="bi bi-person-check-fill text-success me-2 fs-4"></i> **Equipe Especializada:** Profissionais com anos de experiência prontos para atender você.</li>
+                    <li class="d-flex align-items-center mb-3"><i class="bi bi-lightbulb-fill text-warning me-2 fs-4"></i> **Soluções Inovadoras:** Sempre atualizados com as últimas tecnologias do mercado.</li>
+                    <li class="d-flex align-items-center mb-3"><i class="bi bi-headset text-info me-2 fs-4"></i> **Suporte Contínuo:** Estamos ao seu lado do início ao fim do projeto, e depois também.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-4">
+        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20de%20Condomínios." class="btn btn-success btn-lg mx-2 mb-3 mb-md-0" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> WhatsApp
+        </a>
     </div>
 {% endblock %}
+
+
+
+
+
+<div class="row align-items-center mb-5">
+    <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="img-fluid rounded shadow-lg mx-auto d-block" style="max-width: 50%; height: auto;" alt="Imagem de equipe ou inovação">
+    </div>
+</div>

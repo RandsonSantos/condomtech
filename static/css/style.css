@@ -1,0 +1,54 @@
+/*======================================================
+  Fundo Geral da Página
+======================================================*/
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/logo1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #333; /* Cor do texto padrão */
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Garante que o conteúdo principal fique sobre o fundo */
+main {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para o conteúdo */
+    padding-top: 5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 15); /* Sombra para destacar o conteúdo do fundo */
+}
+
+/*======================================================
+  Estilos Específicos das Seções
+======================================================*/
+.hero-section {
+    background: transparent; /* Remove o fundo específico da hero section */
+    height: auto; /* A altura será definida pelo conteúdo */
+    padding-bottom: 2rem;
+    text-shadow: none;
+}
+
+.hero-section h1, .hero-section p {
+    color: white; /* Garante que o texto seja branco sobre o fundo escuro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos para a imagem do logo no rodapé (se existir) */
+.img-fluid.rounded.shadow-lg.mx-auto.d-block {
+    max-width: 50%;
+    height: auto;
+}

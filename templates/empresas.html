@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Soluções para Empresas</h1>
+    <p class="text-center lead mb-5">Conheça nossos serviços especializados para o mundo corporativo.</p>
+
+    <div class="row g-4">
+        {% for service in services %}
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4 text-center">
+                    <i class="bi {{ service.icon }} display-4 text-primary mb-3"></i>
+                    <h4 class="card-title fw-bold">{{ service.title }}</h4>
+                    <p class="card-text text-muted">{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-4">
+        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%para%20Empresas." class="btn btn-success btn-lg mx-2 mb-3 mb-md-0" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> WhatsApp
+        </a>
+    </div>
+{% endblock %}

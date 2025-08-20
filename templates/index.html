@@ -1,63 +1,87 @@
 {% extends "base.html" %}
 
 {% block content %}
-  
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-3 mb-4 mb-md-0">
-                <img src="{{ url_for('static', filename='img/logo3.png') }}" class="img-fluid rounded shadow-sm" alt="Sobre a CondoTech">
+    
+    <div class="hero-section text-black text-center py-0,1">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <img src="{{ url_for('static', filename='img/logo3.png') }}" class="img-fluid rounded shadow-lg mx-auto d-block" style="max-width: 50%; height: auto;" alt="Imagem de equipe ou inovação">
 
-         
-        </div>
-    </div>
-      <div class="bg-light py-5 mb-5 text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3 text-dark">Empresas e Condomínios</h1>
-            <p class="lead mb-4 text-secondary">A CondomTech oferece serviços especializados para otimizar, proteger e modernizar seu ambiente com excelência e confiabilidade.</p>
-            <a href="/services" class="btn btn-primary btn-lg">Conheça Nossos Serviços</a>
+            <h1 class="display-2 fw-bold mb-2 mt-1">Tecnologia e Segurança</h1>
+            <p class="lead mb-4">Descubra a tecnologia que transforma empresas e condomínios em ambientes mais seguros, eficientes e inteligentes.</p>            
         </div>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-1">
+
+    <div class="container my-1">
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-warning">
+                    <div class="card-body p-4 text-center">
+                        <i class="bi bi-cart-fill display-3 text-warning mb-3"></i>
+                        <h5 class="card-title fw-bold">Nossa Loja Online</h5>
+                        <p class="card-text text-muted">Compre produtos de segurança e automação para a sua casa ou empresa.</p>
+                        <a href="{{ url_for('loja') }}" class="btn btn-outline-warning mt-3">Visitar Loja</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body p-4 text-center">
+                        <i class="bi bi-house-fill display-3 text-success mb-3"></i>
+                        <h5 class="card-title fw-bold">Para Condomínios</h5>
+                        <p class="card-text text-muted">Sistemas inteligentes que garantem a segurança e o conforto dos moradores.</p>
+                        <a href="{{ url_for('condominios') }}" class="btn btn-outline-success mt-3">Ver Soluções</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-primary">
+                    <div class="card-body p-4 text-center">
+                        <i class="bi bi-building-fill display-3 text-primary mb-3"></i>
+                        <h5 class="card-title fw-bold">Para Empresas</h5>
+                        <p class="card-text text-muted">Tecnologia e segurança para otimizar sua operação e proteger seu negócio.</p>
+                        <a href="{{ url_for('empresas') }}" class="btn btn-outline-primary mt-3">Ver Soluções</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container my-5 text-center">
-        <h2 class="display-6 fw-bold mb-5">Nossas Principais Áreas de Atuação</h2>
+        <a href="{{ url_for('services') }}" class="btn btn-outline-dark btn-lg">Ver Todos os Serviços</a>
+    </div>
+    <div class="container my-5 text-center">
+        <h2 class="display-6 fw-bold mb-5">O que Podemos Fazer por Você</h2>
         
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="bi bi-shield-lock-fill display-4 text-success mb-3"></i>
-                        <h4 class="card-title fw-bold">Segurança Eletrônica</h4>
-                        <p class="card-text text-muted">Proteção completa com câmeras, alarmes e sistemas de controle de acesso de última geração.</p>
-                    </div>
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-shield-lock-fill display-3 text-primary mb-3"></i>
+                    <h4 class="card-title fw-bold">Segurança Eletrônica</h4>
+                    <p class="card-text text-muted">Sistemas de vigilância, alarmes e controle de acesso para proteção completa do seu patrimônio.</p>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="bi bi-house-door-fill display-4 text-success mb-3"></i>
-                        <h4 class="card-title fw-bold">Automação</h4>
-                        <p class="card-text text-muted">Sistemas inteligentes para otimizar o controle de iluminação, clima e outros dispositivos.</p>
-                    </div>
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-house-door-fill display-3 text-success mb-3"></i>
+                    <h4 class="card-title fw-bold">Automação Inteligente</h4>
+                    <p class="card-text text-muted">Soluções para otimizar o controle de iluminação, clima, portões e outros dispositivos.</p>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="bi bi-tools display-4 text-success mb-3"></i>
-                        <h4 class="card-title fw-bold">Manutenção Preventiva</h4>
-                        <p class="card-text text-muted">Evite falhas e prolongue a vida útil de seus equipamentos com nossa manutenção programada.</p>
-                    </div>
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-tools display-3 text-warning mb-3"></i>
+                    <h4 class="card-title fw-bold">Manutenção e Suporte</h4>
+                    <p class="card-text text-muted">Serviços de manutenção preventiva e suporte técnico ágil para garantir o bom funcionamento de tudo.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="mt-5">
-            <a href="/services" class="btn btn-outline-dark btn-lg">Ver Todos os Serviços</a>
-        </div>
-    </div>
-    
+        <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-4">
+            <a href="https://wa.me/5563984740162" class="btn btn-success btn-lg mx-2 mb-3 mb-md-0" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i> WhatsApp
+            </a>
+
 {% endblock %}
