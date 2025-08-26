@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Câmeras de Segurança</h1>
+    <p class="lead text-muted">Ofertas especiais para proteger o que é seu.</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Produto 1 -->
+    <div class="col-12 col-md-6">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='img/camera-wifi.jpg') }}" class="card-img-top" alt="Câmera Wi-Fi">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Câmera Inteligente Wi-Fi </h5>
+          <p class="card-text text-muted">Monitoramento sem fios com visão noturna e acesso remoto.</p>
+          <ul class="list-unstyled mb-3">
+            <li><span class="text-success fw-bold">R$ 453,54 no PIX</span></li>
+            <li><small class="text-muted text-decoration-line-through">R$ 629,90</small> <span class="badge bg-danger">-28%</span></li>
+            <li><span class="badge bg-success">Frete Grátis</span></li>
+          </ul>
+          <a href="https://wa.me/5563984740162?text=Olá,%20quero%20saber%20mais%20sobre%20a%20Câmera%20Wi-Fi%20iM8." class="btn btn-outline-primary w-100" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> Orçar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="col-12 col-md-6">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='img/camera-veicular.jpg') }}" class="card-img-top" alt="Kit Veicular">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Kit Câmera Veicular Duo Intelbras DC</h5>
+          <p class="card-text text-muted">Gravação frontal e traseira com alta definição e GPS integrado.</p>
+          <ul class="list-unstyled mb-3">
+            <li><span class="text-success fw-bold">R$ 1.095,12 no PIX</span></li>
+            <li><small class="text-muted text-decoration-line-through">R$ 1.220,80</small> <span class="badge bg-danger">-10%</span></li>
+            <li><span class="badge bg-success">Frete Grátis</span></li>
+          </ul>
+          <a href="https://wa.me/5563984740162?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Kit%20Veicular%20Intelbras." class="btn btn-outline-primary w-100" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> Orçar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="col-12 col-md-6">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='img/camera-im7.jpg') }}" class="card-img-top" alt="Câmera IM7">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Câmera Inteligente IM7 3MP Branca</h5>
+          <p class="card-text text-muted">Alta resolução, integração com app e alertas em tempo real.</p>
+          <ul class="list-unstyled mb-3">
+            <li><span class="text-success fw-bold">R$ 359,10 no PIX</span></li>
+            <li><small class="text-muted text-decoration-line-through">R$ 399,00</small> <span class="badge bg-danger">-10%</span></li>
+          </ul>
+          <a href="https://wa.me/5563984740162?text=Olá,%20quero%20saber%20mais%20sobre%20a%20Câmera%20IM7." class="btn btn-outline-primary w-100" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> Orçar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Voltar -->
+  <div class="text-center my-5">
+    <a href="{{ url_for('loja') }}" class="btn btn-outline-secondary">Voltar para a Loja</a>
+  </div>
+</div>
+{% endblock %}

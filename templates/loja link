@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Nossa Loja Online</h1>
+        <p class="lead text-muted">Encontre as melhores soluções em segurança e automação para a sua casa ou empresa.</p>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h5 class="d-inline-block me-3">Categorias:</h5>
+            <div class="btn-group" role="group" aria-label="Categorias de produtos">
+                <a href="{{ url_for('cameras') }}" class="btn btn-outline-primary">Câmeras</a>
+                
+                <button type="button" class="btn btn-outline-success">Alarmes</button>
+                <button type="button" class="btn btn-outline-warning">Automação</button>
+                <button type="button" class="btn btn-outline-info">Kits Completos</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/camera.jpg') }}" class="card-img-top" alt="Câmera de Segurança Full HD">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Câmera de Segurança Full HD</h5>
+                    <p class="card-text">Vigilância de alta qualidade para residências e pequenos negócios. Visão noturna e acesso remoto.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-primary">R$ 299,90</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Câmera%20de%20Segurança%20Full%20HD." class="btn btn-outline-primary" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/alarme.jpg') }}" class="card-img-top" alt="Kit de Alarme Residencial">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Kit de Alarme Residencial</h5>
+                    <p class="card-text">Proteção completa com sensores de porta/janela, controle remoto e sirene de alta potência.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-success">R$ 549,90</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20de%20Alarme%20Residencial." class="btn btn-outline-success" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/sensor.jpg') }}" class="card-img-top" alt="Sensor de Presença Inteligente">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Sensor de Presença Inteligente</h5>
+                    <p class="card-text">Luzes automáticas e alertas no seu celular. Perfeito para economia e segurança.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-info">R$ 89,90</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Sensor%20de%20Presença%20Inteligente." class="btn btn-outline-info" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container text-center my-5">
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-dark btn-lg">Fale Conosco para Orçar seu Projeto</a>
+    </div>
+
+</div>
+{% endblock %}
+
+
+
+
+##<!-- Seções principais -->##
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0 text-center p-4">
+        <i class="bi bi-cart-fill display-3 text-warning mb-3"></i>
+        <h5 class="fw-bold">Nossa Loja Online</h5>
+        <p class="text-muted">Produtos de segurança e automação para sua casa ou empresa.</p>
+        <a href="{{ url_for('loja') }}" class="btn btn-warning">Visitar Loja</a>
+      </div>
+    </div>

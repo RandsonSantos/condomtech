@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Kits Completos</h1>
+        <p class="lead text-muted">Aproveite a praticidade e o melhor custo-benefício com nossos kits prontos para uso.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/kit-seguranca.jpg') }}" class="card-img-top" alt="Kit de Segurança Completo">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Kit de Segurança Completo</h5>
+                    <p class="card-text">Inclui câmeras, sensores de alarme e sirene. Tudo que você precisa para uma proteção total.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-success">R$ 1.250,00</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20de%20Segurança%20Completo." class="btn btn-outline-success" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/kit-residencial.jpg') }}" class="card-img-top" alt="Kit Residencial Inteligente">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Kit Residencial Inteligente</h5>
+                    <p class="card-text">Kit de automação com controle de iluminação, fechadura inteligente e monitoramento via celular.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-primary">R$ 989,00</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20Residencial%20Inteligente." class="btn btn-outline-primary" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='img/kit-empresarial.jpg') }}" class="card-img-top" alt="Kit de CFTV Empresarial">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Kit de CFTV Empresarial</h5>
+                    <p class="card-text">Solução de segurança profissional com 4 câmeras, DVR e HD para gravação contínua.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-4 fw-bold text-info">R$ 1.850,00</span>
+                        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20de%20CFTV%20Empresarial." class="btn btn-outline-info" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> Orçar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container text-center my-5">
+        <a href="{{ url_for('loja') }}" class="btn btn-outline-secondary">Voltar para a Loja</a>
+    </div>
+
+</div>
+{% endblock %}

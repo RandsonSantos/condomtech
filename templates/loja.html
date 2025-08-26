@@ -1,15 +1,83 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="text-center mb-4">Nossa Loja Online</h1>
-    <p class="text-center lead mb-5">Em breve, nossa loja estará no ar, com os melhores produtos de tecnologia para sua casa ou empresa.</p>
-    
-    <div class="text-center my-5">
-        <img src="{{ url_for('static', filename='img/em-breve.png') }}" class="img-fluid" alt="Em breve">
+<!-- Carrossel de Banners -->
+<div id="carouselBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="{{ url_for('static', filename='img/camera-bullet.jpg') }}" class="d-block w-100 banner-img" alt="Banner 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="fw-bold">Tecnologia ao seu alcance</h1>
+        <p>Automação, segurança e inovação para sua casa ou empresa.</p>
+      </div>
     </div>
-    <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-4">
-        <a href="https://wa.me/5563984740162?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%Produtos%Da%Loja." class="btn btn-success btn-lg mx-2 mb-3 mb-md-0" target="_blank">
-            <i class="bi bi-whatsapp me-2"></i> WhatsApp
-        </a>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="{{ url_for('static', filename='img/camera-dome.jpg') }}" class="d-block w-100 banner-img" alt="Banner 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="fw-bold">Soluções inteligentes</h1>
+        <p>Controle tudo pelo celular com máxima segurança.</p>
+      </div>
     </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="{{ url_for('static', filename='img/camera-bullet.jpg') }}" class="d-block w-100 banner-img" alt="Banner 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="fw-bold">Projetos personalizados</h1>
+        <p>Montamos o sistema ideal para sua necessidade.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Seção de Categorias -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Categorias</h2>
+    <p class="text-muted">Escolha o tipo de solução que você procura</p>
+  </div>
+  <div class="d-flex justify-content-center flex-wrap gap-3">
+    <a href="{{ url_for('cameras') }}" class="btn btn-outline-primary">Câmeras</a>
+    <a href="{{ url_for('alarmes') }}" class="btn btn-outline-success">Alarmes</a>
+    <a href="{{ url_for('automacao') }}" class="btn btn-outline-warning">Automação</a>
+    <a href="{{ url_for('kits') }}" class="btn btn-outline-info">Kits Completos</a>
+  </div>
+</section>
+
+<!-- Seção de Produtos -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Produtos em Destaque</h2>
+    <p class="text-muted">Qualidade, tecnologia e preço justo</p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for produto in produtos %}
+    <div class="col">
+      <div class="card h-100 shadow-sm border-0 hover-scale">
+        <img src="{{ url_for('static', filename=produto.imagem) }}" class="card-img-top" alt="{{ produto.nome }}">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">{{ produto.nome }}</h5>
+          <p class="card-text">{{ produto.descricao }}</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fs-5 fw-bold text-primary">R$ {{ produto.preco }}</span>
+            <a href="{{ produto.link_whatsapp }}" class="btn btn-outline-primary btn-sm" target="_blank">
+              <i class="bi bi-whatsapp me-1"></i> Orçar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Chamada para Ação -->
+<section class="container text-center my-5">
+  <h4 class="fw-bold mb-3">Quer montar um projeto completo?</h4>
+  <a href="{{ url_for('contact') }}" class="btn btn-dark btn-lg">Fale com um especialista</a>
+</section>
 {% endblock %}
